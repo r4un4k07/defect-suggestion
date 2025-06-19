@@ -1,0 +1,51 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# MacOS system files
+.DS_Store
+
+# Environment files
+.env
+.venv
+venv/
+ENV/
+env/
+
+# Data files
+*.csv
+*.tsv
+*.log
+
+# Model files
+*.pkl
+*.joblib
+*.h5
+*.txt
+
+# Python egg files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Test outputs
+*.out
+*.test
+
+# Misc
+*.swp
+*.swo
+
+# Ignore resources cache
+resources/__pycache__/
