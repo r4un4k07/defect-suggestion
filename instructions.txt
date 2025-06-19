@@ -1,0 +1,78 @@
+Project Title: Real-Time Prediction and Control of CAPL Defects Using Machine Learning in the LRF Stage  
+Developed By: Raunak Rawani (2103036), Parvati Kumari (2203005D)  
+Department: Metallurgical Engineering, B.I.T. Sindri  
+Semester: B.Tech 8th Semester  
+
+---------------------------------------
+Directory Structure:
+---------------------------------------
+project-root/
+│
+├── app.py                             # Main Streamlit application
+│
+├── model_files/                       # Trained models and preprocessors
+│   ├── rf_model.pkl                   # Random Forest model
+│   ├── lgb_model.txt                  # LightGBM model
+│   ├── scaler.pkl                     # StandardScaler for input scaling
+│   └── label_encoder.pkl              # LabelEncoder for defect classes
+│
+├── resources/                         # Static assets and utility files
+│   ├── logo.png                       # College or project logo for sidebar
+│   └── info.py                        # Info page loaded via routing
+│
+├── accuracy_test/                     # Evaluation notebooks using 80-20 split
+│   ├── lightGBM.ipynb
+│   └── random_forest.ipynb
+│
+├── backend/                           # Final model training & suggestion logic
+│   ├── lightGBM.ipynb                 # LightGBM trained on 100% data
+│   └── random_forest.ipynb            # Random Forest trained on 100% data
+│
+├── data.csv                           # Final chemistry dataset
+├── requirements.txt                   # Python dependencies
+└── instructions.txt                   # This file
+
+---------------------------------------
+Setup Instructions:
+---------------------------------------
+
+1. Install Required Packages:
+
+Use the following command to install required libraries:
+
+pip install -r requirements.txt
+
+(Or manually install with:  
+pip install streamlit pandas numpy scikit-learn joblib lightgbm scipy matplotlib pillow)
+
+2. Run the Application:
+
+Launch the Streamlit interface by running:
+
+streamlit run app.py
+
+3. Access the App:
+
+Open the link provided in the terminal (usually http://localhost:8501)
+
+---------------------------------------
+Functionality Overview:
+---------------------------------------
+
+✔️ Accepts 18-element post-LRF chemistry input  
+✔️ Predicts most probable defect using selected ML model  
+✔️ Displays class probabilities and top 3 predictions  
+✔️ If "Inclusion Free" probability < 0.8, provides chemical suggestions  
+✔️ Suggestions computed via differential evolution optimization  
+✔️ Optimized values can be auto-filled for further testing  
+✔️ Includes validation and user-friendly error messages  
+✔️ Mimics real-time control decision support system in steelmaking
+
+---------------------------------------
+Notes:
+---------------------------------------
+
+- Models were trained on full dataset (100%) in `backend/` notebooks  
+- Accuracy metrics using 80-20 train-test split are in `accuracy_test/`  
+- All models and scalers are preloaded from `model_files/`  
+- Inputs must stay within defined bounds to ensure prediction validity
