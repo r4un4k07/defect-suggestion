@@ -108,15 +108,26 @@ if st.sidebar.button("ℹ️ How This Works"):
     st.query_params["page"] = "info"
     st.rerun()
 
+#Guided by
+st.sidebar.markdown("### 👥 Guided by")
+st.sidebar.markdown("""
+<div style="background-color: #1f2937; padding: 16px; border-radius: 12px; border: 1px solid #374151; color: #d1d5db; font-size: 14px; line-height: 1.6;">
+    <div><strong style="font-size: 16px; color: #60a5fa;">Prof. Kirty Madhavi</strong></div>
+    <div style="font-size: 14px;">Assistant Professor</div>
+    <div style="font-size: 14px;">Department of Metallurgical Engineering</div>
+    <div style="font-size: 14px;">B.I.T. Sindri</div>
+</div>
+""", unsafe_allow_html=True)
+
 # Student info with dark styling
 st.sidebar.markdown("### 🎓 Student Info")
 st.sidebar.markdown("""
 <div style="background-color: #1f2937; padding: 16px; border-radius: 12px; border: 1px solid #374151; color: #d1d5db; font-size: 14px; line-height: 1.6;">
-    <div><strong style="font-size: 16px; color: #60a5fa;">Author 1:</strong> <span style="font-weight: 700; font-size: 16px; color: #facc15;">Raunak Rawani (2103036)</span></div>
-    <div><strong style="font-size: 16px; color: #60a5fa;">Author 2:</strong> <span style="font-weight: 700; font-size: 16px; color: #facc15;">Parvati Kumari (2203005D)</span></div>
-    <div><strong> B.Tech 8<sup>th</sup> Semester</strong></div>
-    <div><strong> Metallurgical Engineering</strong></div>
-    <div><strong> B.I.T. Sindri</strong></div>
+    <div><strong style="font-size: 16px; color: #60a5fa;">Raunak Rawani</strong> <span style="font-size: 14px;">(2103036)</span></div>
+    <div><strong style="font-size: 16px; color: #60a5fa;">Parvati Kumari</strong> <span style="font-size: 14px;">(2203005D)</span></div>
+    <div style="margin-top: 8px;"><strong>B.Tech 8<sup>th</sup> Semester</strong></div>
+    <div><strong>Metallurgical Engineering</strong></div>
+    <div><strong>B.I.T. Sindri</strong></div>
 </div>
 """, unsafe_allow_html=True)
 
